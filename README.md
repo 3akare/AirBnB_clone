@@ -9,7 +9,7 @@ This console is a command interpreter similar to [hsh](https://github.com/3akare
 - Update attributes of an object
 - Destroy an object
 
-This console is the first step towards building a full web application: the [AirBnB](airbnb.com) clone. The console allows us to understand what works with in the storage engine and what doesn't
+This console is the first step towards building a full web application: the [AirBnB](airbnb.com) clone. The console allows us to understand what works in the storage engine and what doesn't
 
 <img src='AirBnB-image.png' width=70%></img>
 
