@@ -50,3 +50,26 @@ EOF help quit
 (hbnb)
 $
 ```
+# Installation
+Clone this repository
+```
+git clone "https://github.com/3akare/AirBnB_clone.git"
+```
+Access AirBnb directory
+```shell
+cd AirBnB_clone
+```
+Run hbnb(interactively)
+```shell
+ ./console.py
+```
+Run hbnb (non-interactively)
+```shell
+echo "<command>" | ./console.py
+```
+
+# Authors
+- [David Bakare](https://github.com/3akare)
+
+# Acknowledgements
+This project was written as part of the curriculum for Holberton School.
