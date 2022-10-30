@@ -11,7 +11,7 @@ This console is a command interpreter similar to [hsh](https://github.com/3akare
 
 This console is the first step towards building a full web application: the [AirBnB](airbnb.com) clone. The console allows us to understand what works in the storage engine and what doesn't
 
-<img src='AirBnB-image.png' width=70%></img>
+<img src='readme_image/AirBnB-image.png' width=70%></img>
 
 # Execution
 This console works like this in interactive mode
