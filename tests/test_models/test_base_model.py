@@ -11,12 +11,11 @@ class BaseModelTest(unittest.TestCase):
     ''' Test for Instance'''
 
     def test_instance(self):
-        """making a lab rat"""
-
+        """Test Intsance"""
         my_model = BaseModel()
         self.assertIsInstance(my_model, BaseModel)
         self.assertTrue(issubclass(type(my_model), BaseModel))
-    
+
     def test_datetime_creation(self):
         """checking for datetime function"""
         my_model = BaseModel()
