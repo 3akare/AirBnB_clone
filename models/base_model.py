@@ -5,6 +5,7 @@
 import datetime as dt
 import uuid
 
+
 class BaseModel:
     ''' Representation of a base model'''
 
@@ -19,7 +20,8 @@ class BaseModel:
         self.updated_at = dt.datetime.now().isoformat()
 
     def to_dict(self):
-        ''' Returns a dictionary containing all keys/values of __dict__ of the instance'''
+        ''' Returns a dictionary containing all
+        keys/values of __dict__ of the instance'''
 
         dic = self.__dict__.copy()
         dic["__class__"] = type(self).__name__
@@ -29,4 +31,5 @@ class BaseModel:
 
     def __str__(self):
         """ Print a Base Model """
-        return '[{}] ({}) {}'.format(type(self).__name__, self.id, self.__dict__)
+        return '''[{}] ({})
+         {}'''.format(type(self).__name__, self.id, self.__dict__)
