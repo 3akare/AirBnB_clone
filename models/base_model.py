@@ -31,5 +31,5 @@ class BaseModel:
 
     def __str__(self):
         """ Print a Base Model """
-        return '''[{}] ({})
-         {}'''.format(type(self).__name__, self.id, self.__dict__)
+        return '''[{}] ({}) 
+        {}'''.format(type(self).__name__, self.id, self.__dict__)
