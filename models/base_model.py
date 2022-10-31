@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 ''' Contains the BaseModel Class '''
-import datetime as dt
+from datetime import datetime
 import uuid
+
+
+tf = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 class BaseModel:
@@ -9,9 +12,21 @@ class BaseModel:
 
     def __init__(self, *arg, **kwargs):
         ''' Initialising '''
-        self.id = str(uuid.uuid4())
-        self.created_at = dt.datetime.now()
-        self.updated_at = dt.datetime.now()
+
+        if kwargs is not None and kwargs != {}:
+            for key in kwargs:
+                if key == 'created_at':
+                    self.__dict__['created_at'] = datetime.strptime(
+                        kwargs["created_at"], tf)
+                elif key == 'updated_at':
+                    self.__dict__['updated_at'] = datetime.strptime(
+                        kwargs["updated_at"], tf)
+                else:
+                    self.__dict__[key] = kwargs[key]
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         ''' Should Print'''
@@ -19,7 +34,7 @@ class BaseModel:
 
     def save(self):
         ''' updates the public instance attribute with the current datetime '''
-        self.updated_at = dt.datetime.now()
+        self.updated_at = datetime.now()
 
     def to_dict(self):
         ''' returns a dictionary containing all
