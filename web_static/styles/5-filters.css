@@ -1,0 +1,27 @@
+/* filters 5-index CSS */
+
+.flex{
+    display: flex;
+    width: 70%;
+    position: absolute;
+}
+
+.amenities, .locations{
+    width: 100%;
+    height: 100%;
+}
+
+.locations{
+    border-right: 1px solid #ddd;
+}
+
+.locations h3, .amenities h3{
+    margin: 10px;
+    font-weight: 600;
+}
+
+.locations h4, .amenities h4{
+    margin: 0px 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
