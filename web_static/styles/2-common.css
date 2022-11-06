@@ -1,0 +1,14 @@
+/* Body CSS file */
+@import "footer.css";
+@import "header.css";
+
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+main{
+    height: calc(100vh - (73px + 73px));
+    width: 100%;
+}
