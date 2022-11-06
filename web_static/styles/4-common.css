@@ -1,0 +1,24 @@
+/* Common 4-index CSS */
+@import "4-filters.css";
+@import "3-header.css";
+@import "3-footer.css";
+
+body{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    color: #484848;
+    font: normal 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+main{
+    height: calc(100vh - (88px + 88px));
+    width: 100%;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 30px auto;
+    position: relative;
+}
