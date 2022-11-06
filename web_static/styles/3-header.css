@@ -1,0 +1,11 @@
+/* header 3-index CSS */
+
+header{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    background-color: white;
+}
+header img{
+    margin-left: 20px;
+}

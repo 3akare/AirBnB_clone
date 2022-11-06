@@ -1,0 +1,16 @@
+/* Common 3-index CSS */
+@import "3-footer.css";
+@import "3-header.css";
+
+body{
+    padding: 0px;
+    margin: 0px;
+    color: #484848;
+    font: normal 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+main{
+    height: calc(100vh - (73px + 73px));
+    width: 100%;
+}
