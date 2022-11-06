@@ -3,7 +3,11 @@
 @import "3-header.css";
 @import "3-footer.css";
 @import "5-filters.css";
+@import "6-filters.css";
 
+*{
+    box-sizing: border-box;
+}
 body{
     padding: 0px;
     box-sizing: border-box;
