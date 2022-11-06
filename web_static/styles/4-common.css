@@ -4,6 +4,7 @@
 @import "3-footer.css";
 @import "5-filters.css";
 @import "6-filters.css";
+@import "7-places.css";
 
 *{
     box-sizing: border-box;
@@ -18,7 +19,7 @@ body{
 }
 
 main{
-    height: calc(100vh - (88px + 88px));
+    height: calc(100vh - (40px + 40px));
     width: 100%;
 }
 
