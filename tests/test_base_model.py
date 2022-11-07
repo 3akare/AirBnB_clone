@@ -1,4 +1,4 @@
-#!/usr.bin/env python3
+#!/usr/bin/env python3
 ''' Base Model Testing '''
 import unittest
 import datetime
