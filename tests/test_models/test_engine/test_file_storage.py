@@ -40,6 +40,13 @@ class TestFileStorage_init(unittest.TestCase):
             save_text = f.read()
             self.assertIn("BaseModel." + bm.id, save_text)
 
+    def test_reload(self):
+        bm = BaseModel()
+        models.storage.save()
+        models.storage.reload()
+        objs = FileStorage._FileStorage__objects
+        self.assertIn("BaseModel." + bm.id, objs)
+
 
 if __name__ == '__main__':
     unittest.main()
