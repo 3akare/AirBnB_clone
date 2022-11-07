@@ -6,6 +6,7 @@
 @import "6-filters.css";
 @import "7-places.css";
 @import "8-places.css";
+@import "100-places.css";
 
 *{
     box-sizing: border-box;

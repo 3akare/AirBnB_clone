@@ -1,0 +1,60 @@
+/* places 100-index CSS */
+
+article .amenities, .reviews{
+    margin-top: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom:1px solid #ddd ;
+}
+article .amenities h2, article .reviews h2{
+    margin-top: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.reviews li h3{
+    font-size: 14px;
+}
+.reviews li p{
+    font-size: 12px;
+}
+ul{
+    margin-top: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.amenities ul li{
+    display: flex;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 500px) {
+    .filters .flex{
+        display: none;
+        /* border: 30px solid red; */
+    }
+    .filters{
+        align-self: center;
+        margin: auto;
+        width: 90%;
+    }
+    .filters button{
+        position: relative;
+        float: right;
+        width: 100px;
+    }
+
+    .places h1{
+        margin-left: 30px;
+    }
+
+    section .amenities ul, section .reviews ul{
+        display: none;
+    }
+    
+    section .amenities:hover ul, section .reviews:hover ul{
+        display: block;
+    }
+}
