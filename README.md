@@ -1,4 +1,4 @@
-# AirBnB -Console
+# AirBnB - Console
 
 This console is a command interpreter similar to [hsh](https://github.com/3akare/simple_shell), but limited to a specific use-case.
 
