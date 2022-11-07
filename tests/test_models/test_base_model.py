@@ -8,7 +8,7 @@ from models.base_model import BaseModel
 
 
 class TestBaseModel_init(unittest.TestCase):
-    ''' Test Case for BaseModel init '''
+    """Unittests for testing init method of the BaseModel"""
 
     def test_no_args_init(self):
         self.assertEqual(BaseModel, type(BaseModel()))

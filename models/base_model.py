@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """ Declare a Base Model """
+import models
 import datetime
 import uuid
 
@@ -20,7 +21,7 @@ class BaseModel:
                 else:
                     self.__dict__[k] = v
         else:
-            pass
+            models.storage.new(self)
 
     def __str__(self):
         ''' String Magic Method '''
@@ -31,6 +32,7 @@ class BaseModel:
         ''' Updates the pubic instance attribute with current datetime '''
 
         self.updated_at = datetime.datetime.now()
+        models.storage.save()
 
     def to_dict(self):
         '''
