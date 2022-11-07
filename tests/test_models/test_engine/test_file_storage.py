@@ -18,11 +18,15 @@ class TestFileStorage_init(unittest.TestCase):
     def test_presence_of_file_path(self):
         self.assertIsInstance(FileStorage._FileStorage__file_path, str)
 
-    def test_reload_no_file(self):
-        self.assertRaises(TypeError, models.storage.reload())
-
     def test_presence_of_objects(self):
         self.assertIsInstance(FileStorage._FileStorage__objects, dict)
+
+
+class TestFileStorage_methods(unittest.TestCase):
+    """Unittests for FileStorage methods"""
+    
+    def test_reload_no_file(self):
+        self.assertRaises(TypeError, models.storage.reload())
 
     def test_all(self):
         self.assertEqual(dict, type(models.storage.all()))
@@ -46,6 +50,10 @@ class TestFileStorage_init(unittest.TestCase):
         models.storage.reload()
         objs = FileStorage._FileStorage__objects
         self.assertIn("BaseModel." + bm.id, objs)
+    
+    def test_reload_with_arg(self):
+        with self.assertRaises(TypeError):
+            models.storage.reload(None)
 
 
 if __name__ == '__main__':
