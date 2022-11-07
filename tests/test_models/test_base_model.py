@@ -12,7 +12,7 @@ class TestBaseModel_init(unittest.TestCase):
 
     def test_no_args_init(self):
         self.assertEqual(BaseModel, type(BaseModel()))
-    
+
     def test_id_is_str(self):
         self.assertIsInstance(BaseModel().id, str)
 
@@ -21,11 +21,12 @@ class TestBaseModel_init(unittest.TestCase):
 
     def test_updated_at_datetime(self):
         self.assertIsInstance(BaseModel().updated_at, datetime)
-    
+
     def test_different_id(self):
         rat1 = BaseModel()
         rat2 = BaseModel()
         self.assertNotEqual(rat1.id, rat2.id)
+
 
 class TestBaseModel_save(unittest.TestCase):
     """Unittests for testing save method of the BaseModel class."""
@@ -55,6 +56,7 @@ class TestBaseModel_save(unittest.TestCase):
 
             self.assertIn(bmid, f.read())
 
+
 class TestBaseModel_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of the BaseModel class."""
 
@@ -67,7 +69,7 @@ class TestBaseModel_to_dict(unittest.TestCase):
         bm_dict = bm.to_dict()
         self.assertEqual(str, type(bm_dict["created_at"]))
         self.assertEqual(str, type(bm_dict["updated_at"]))
-    
+
     def test_to_dict_output(self):
         dt = datetime.today()
         bm = BaseModel()
