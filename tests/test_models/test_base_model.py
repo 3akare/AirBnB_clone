@@ -26,6 +26,14 @@ class TestBaseModel_init(unittest.TestCase):
         rat1 = BaseModel()
         rat2 = BaseModel()
         self.assertNotEqual(rat1.id, rat2.id)
+    
+    def test_instantiation_with_kwargs(self):
+        dt = datetime.today()
+        dt_iso = dt.isoformat()
+        bm = BaseModel(id="345", created_at=dt_iso, updated_at=dt_iso)
+        self.assertEqual(bm.id, "345")
+        self.assertEqual(bm.created_at, dt)
+        self.assertEqual(bm.updated_at, dt)
 
 
 class TestBaseModel_save(unittest.TestCase):
