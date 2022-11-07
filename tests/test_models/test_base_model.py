@@ -83,6 +83,17 @@ class TestBaseModel_to_dict(unittest.TestCase):
         }
         self.assertDictEqual(bm.to_dict(), tdict)
 
+class TestBaseModel_str(unittest.TestCase):
+    """Unittests for testing __str__ method of the BaseModel """
+
+    def test_classname_in_str(self):
+        self.assertIn('BaseModel', BaseModel().__str__())
+
+    def test_id_in_str(self):
+        self.assertIn('id', BaseModel().__str__())
+
+    def test_dict_in_str(self):
+        self.assertIsInstance(BaseModel().__dict__, dict)
 
 if __name__ == "__main__":
     unittest.main()
