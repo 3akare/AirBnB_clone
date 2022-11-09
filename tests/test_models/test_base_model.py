@@ -26,7 +26,7 @@ class TestBaseModel_init(unittest.TestCase):
         rat1 = BaseModel()
         rat2 = BaseModel()
         self.assertNotEqual(rat1.id, rat2.id)
-    
+
     def test_instantiation_with_kwargs(self):
         dt = datetime.today()
         dt_iso = dt.isoformat()
@@ -91,7 +91,7 @@ class TestBaseModel_str(unittest.TestCase):
     def test_id_in_str(self):
         self.assertIn('id', BaseModel().__str__())
 
-    def test_dict_in_str(self):
+    def test_dict_method(self):
         self.assertIsInstance(BaseModel().__dict__, dict)
 
 
